@@ -1,4 +1,5 @@
 import { loadCss } from "./utils/loadCss.js";
+import { loadScript } from "./utils/loadJs.js";
 
 const routes = {
     '#/' : 'landpage.html',
@@ -16,19 +17,17 @@ export async function router(){
     switch (route) {
         case '#/login':
             loadCss('login.css')
+            loadScript('login.js')
             break;
         
         case '#/register':
             loadCss('register.css')
+            loadScript('register.js')
             break;
 
         case '#/landpage':
             loadCss('landpage.css')
             break;
-
-        // case '#/dashboard':
-        //     loadCss('dashboard.css')
-        //     break;
     
         default:
             break;

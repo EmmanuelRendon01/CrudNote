@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Emmanuel Rendon Goez",
+      "email": "emarendon1301@gmail.com",
+      "username": "emmanuelrendon01",
+      "password": "123",
+      "id": "b6dd",
+      "notes": [
+        {
+          "title": "Tour de france",
+          "noteBody": "Pogacar probablemente va ganar el tour de france",
+          "shared": [
+            {
+              "username": "juancho"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
