@@ -1,16 +1,25 @@
+const loadedScripts = new Set();
+
 export function loadScript(filename) {
-    const existing = document.getElementById('page-script');
-    if (existing) {
-        existing.remove();
-    }
+    return new Promise((resolve, reject) => {
+        const scriptId = `script-${filename.replace(/[^a-zA-Z0-9]/g, '-')}`;
+        
+        // Si el script ya existe, solo re-inicializar
+        if (loadedScripts.has(filename)) {
+            resolve();
+            return;
+        }
 
-
-    setTimeout(() => {
         const script = document.createElement('script');
-        script.id = "page-script";
+        script.id = scriptId;
         script.type = "module";
         script.src = `./scripts/${filename}`;
-        document.body.appendChild(script);
-    }, 1000);
+        script.onload = () => {
+            loadedScripts.add(filename);
+            resolve();
+        };
+        script.onerror = () => reject(new Error(`Error al cargar ${filename}`));
 
+        document.body.appendChild(script);
+    });
 }

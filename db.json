@@ -17,6 +17,14 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Emmanuel",
+      "email": "guille@gmail.com",
+      "username": "Mourneechriss",
+      "password": "123",
+      "notes": [],
+      "id": "PwVyMNK"
     }
   ]
 }
