@@ -13,13 +13,6 @@
       "username": "juan",
       "password": "123",
       "id": "PwVyMNK"
-    },
-    {
-      "name": "Sebastian Montoya",
-      "email": "montoya@gmail.com",
-      "username": "montoya",
-      "password": "123",
-      "id": "1FKGlPj"
     }
   ],
   "notes": [
@@ -91,13 +84,6 @@
       "authorId": "b6dd",
       "shared": [],
       "id": "aSx56tk"
-    },
-    {
-      "title": "Nota nueva",
-      "noteBody": "",
-      "authorId": "1FKGlPj",
-      "shared": [],
-      "id": "_jMaMCZ"
     }
   ]
 }
