@@ -79,9 +79,7 @@ export async function router() {
                 break;
         }
     } catch (error) {
-        // window.location.href = '#/';
         app.innerHTML = `<h1>Error</h1>`;
-        // alert(error);
         console.error(error);
     }
 }

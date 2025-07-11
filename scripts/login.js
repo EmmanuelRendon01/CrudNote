@@ -23,8 +23,6 @@ export function init() {
             
             const emailFetch = await fetch(`http://localhost:3000/users?email=${data.email}`);
             const emailResponse = await emailFetch.json();
-            console.log(emailResponse);
-            
             
             if (emailResponse[0]) {
                 if (emailResponse[0].password === data.password) {
