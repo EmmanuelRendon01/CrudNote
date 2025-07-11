@@ -13,9 +13,7 @@ export async function renderRoute(hash, app) {
   const path = hash.slice(1) || '/';
   const load = routes[path];
 
-  if (!auth(path)) {
-    return;
-  }
+  auth(path);
 
   if (!load) {
     app.innerHTML = '<h2>Página no encontrada</h2>';

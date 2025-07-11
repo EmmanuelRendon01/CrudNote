@@ -5,10 +5,6 @@ export function auth(path) {
         const session = sessionStorage.getItem('logged');
         if (session !== "true") {
             window.location.href = '#/login';
-            return false;
-
-        }else{
-            return true;
         }
     }
 }
