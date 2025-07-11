@@ -18,12 +18,11 @@ export function init() {
                 data[key] = value;
             }
 
-            data["notes"] = [];
-
-            if (!data.email || !data.password || !data.name || !data.username) {
+            if (!data.email.trim() || !data.password.trim() || !data.name.trim() || !data.username.trim()) {
                 alert("Hay campos vacíos");
                 return;
             }
+
             const emailFetch = await fetch(`http://localhost:3000/users?email=${data.email}`);
             const emailResponse = await emailFetch.json();
 
@@ -40,11 +39,12 @@ export function init() {
                 return;
             }
 
-
-            add(data);
+            add(data, 'users');
 
             window.location.href = '#/dashboard'
-            sessionStorage.setItem('logged', "true")
+            sessionStorage.setItem('logged', "true");
+            sessionStorage.setItem('session', JSON.stringify(data));
+            
         };
 
         registerForm.addEventListener('submit', registerHandler)

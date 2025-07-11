@@ -8,10 +8,10 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link fw-bold text-black" href="#">My Notes</a>
-                <a class="nav-link fw-bold text-black" href="#">Shared Notes</a>
+                <a class="nav-link fw-bold text-black" href="#/dashboard">My Notes</a>
+                <a class="nav-link fw-bold text-black" href="#/dashboard">Shared Notes</a>
                 <div class="d-flex gap-2 ms-3">
-                    <button type="button" class="btn btn-light fw-bold text-black">Sign Out</button>
+                    <button type="button" class="btn btn-light fw-bold text-black" id="signOut">Sign Out</button>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row pt-5">
             <div class="col-12">
-                <h1>Hello, Emmanuel</h1>
+                <h1 id="greetings"></h1>
             </div>
         </div>
 
@@ -36,63 +36,25 @@
             <hr>
         </div>
 
-        <div class="row pt-5">
+        <div class="row pt-4" id="myNotes">
             <div class="col-12  pb-2">
                 <h3>My Notes</h3>
             </div>
 
-            <div class="col-12 col-md-3 col-lg-3 mb-3">
-                <div class="card">
-                    <i class="bi bi-person-add fs-4 mx-3 pt-3"></i>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold text-black">Collaborate</h5>
-                        <p class="card-text text-secondary">Collaborate with your team in real-time</p>
-                    </div>
-                </div>
-            </div>
-
+            
         </div>
 
-        <div class="row pt-3">
+        <div class="row pt-3" id="sharedNotes">
 
             <div class="col-12 pb-3">
                 <h3>Notes Shared With Me</h3>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-4 mb-3">
-                <div class="card">
-                    <i class="bi bi-person-add fs-4 mx-3 pt-3"></i>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold text-black">Collaborate</h5>
-                        <p class="card-text text-secondary">Collaborate with your team in real-time</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 col-lg-4 mb-3">
-                <div class="card">
-                    <i class="bi bi-person-add fs-4 mx-3 pt-3"></i>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold text-black">Collaborate</h5>
-                        <p class="card-text text-secondary">Collaborate with your team in real-time</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 col-lg-4 mb-3">
-                <div class="card">
-                    <i class="bi bi-person-add fs-4 mx-3 pt-3"></i>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold text-black">Collaborate</h5>
-                        <p class="card-text text-secondary">Collaborate with your team in real-time</p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <div class="row pt-5">
             <div class="col-12 text-end mb-3">
-                <!-- <button type="button" class="btn btn-primary rounded fw-bold btn-lg">+ New Note</button> -->
                 <a class="btn btn-primary rounded fw-bold btn-l" href="#/note" role="button">+ New Note</a>
             </div>
         </div>

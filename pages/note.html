@@ -8,14 +8,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link fw-bold text-black" href="#">My Notes</a>
-                <a class="nav-link fw-bold text-black" href="#">Shared Notes</a>
+                <a class="nav-link fw-bold text-black" href="#/dashboard">My Notes</a>
+                <a class="nav-link fw-bold text-black" href="#/dashboard">Shared Notes</a>
                 <div class="d-flex gap-2 ms-3">
                     <button type="button" class="btn btn-light fw-bold text-black">Sign Out</button>
                 </div>
-
-
-
             </div>
         </div>
 
@@ -24,21 +21,26 @@
 
 <main>
     <div class="container">
-        <div class="row pt-5 mt-5">
-            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column">
-                <h3 class="pb-3">Meeting Notes</h3>
-                <textarea class="form-control" id="message" rows="8" placeholder="Note here..."></textarea>
-                <div class="d-flex pt-5">
-                    <button type="button" class="btn btn-primary fw-bold btn-lg">Create Note</button>
+        <form id="createNoteForm">
+            <div class="row pt-5 mt-5">
+                <div class="col-12 col-md-6 col-lg-6 d-flex flex-column">
+                    <h3 class="pb-3">Meeting Notes</h3>
+
+                    <label for="title" class="form-label">Note Title</label>
+                    <input type="text" class="form-control mb-2" id="title" name="title"
+                        placeholder="Note title here...">
+                    <textarea class="form-control" id="noteBody" rows="8" placeholder="Note here..."
+                        name="noteBody"></textarea>
+                    <div class="d-flex pt-5">
+                        <button type="submit" class="btn btn-primary fw-bold btn-lg">Create Note</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="notes-img" class="note__img img-fluid rounded-pill ms-5">
                 </div>
 
             </div>
-
-            <div class="col-12 col-md-6 col-lg-6 pt-5 mt-5 d-flex flex-column align-items-center gap-5">
-                <button type="button" class="head__btn btn btn-danger fw-bold btn-lg">Delete Note</button>
-                <button type="button" class="head__btn btn btn-info fw-bold btn-lg">Share Note</button>
-            </div>
-
-        </div>
+        </form>
     </div>
 </main>

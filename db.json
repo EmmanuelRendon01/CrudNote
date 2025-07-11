@@ -5,26 +5,85 @@
       "email": "emarendon1301@gmail.com",
       "username": "emmanuelrendon01",
       "password": "123",
-      "id": "b6dd",
-      "notes": [
+      "id": "b6dd"
+    },
+    {
+      "name": "Juan",
+      "email": "juan@gmail.com",
+      "username": "juan",
+      "password": "123",
+      "id": "PwVyMNK"
+    }
+  ],
+  "notes": [
+    {
+      "id": "esds45",
+      "authorId": "b6dd",
+      "title": "Tour de france",
+      "noteBody": "Pogacar probablemente va ganar el tour de france",
+      "shared": [
         {
-          "title": "Tour de france",
-          "noteBody": "Pogacar probablemente va ganar el tour de france",
-          "shared": [
-            {
-              "username": "juancho"
-            }
-          ]
+          "userId": "PwVyMNK",
+          "permission": "read"
         }
       ]
     },
     {
-      "name": "Emmanuel",
-      "email": "guille@gmail.com",
-      "username": "Mourneechriss",
-      "password": "123",
-      "notes": [],
-      "id": "PwVyMNK"
+      "id": "easd15",
+      "authorId": "b6dd",
+      "title": "Dempelé",
+      "noteBody": "Ese parcero le mete durísimo a lo que viene siendo la redonda",
+      "shared": [
+        {
+          "userId": "PwVyMNK",
+          "permission": "read"
+        }
+      ]
+    },
+    {
+      "id": "asd12",
+      "authorId": "b6dd",
+      "title": "El medellín pierde mucha final",
+      "noteBody": "Desde que se fue Cano ese equipo es una lágrima pa.",
+      "shared": [
+        {
+          "userId": "PwVyMNK",
+          "permission": "read"
+        }
+      ]
+    },
+    {
+      "id": "asdsa1",
+      "authorId": "PwVyMNK",
+      "title": "Verifica si esto funcionó",
+      "noteBody": "Uy quieto esto tiene mucho contenido pa, que bueno",
+      "shared": [
+        {
+          "userId": "b6dd",
+          "permission": "read"
+        }
+      ]
+    },
+    {
+      "title": "Año nuevo, vida nueva",
+      "noteBody": "Entre pitos y matracas, Entre música y sonrisa, El reloj ya nos avisa que ha llegado un año más, Las mujeres y los hombres, un besito nos daremos, Entre todos cantaremos llenos de felicidad, Vamos todos a cantar",
+      "authorId": "b6dd",
+      "shared": [],
+      "id": "s7GSs6C"
+    },
+    {
+      "title": "Nota para probar como se ve la segunda fila",
+      "noteBody": "",
+      "authorId": "b6dd",
+      "shared": [],
+      "id": "vxmXrVd"
+    },
+    {
+      "title": "Nota para seguir validando como se ve la nota",
+      "noteBody": "",
+      "authorId": "b6dd",
+      "shared": [],
+      "id": "aSx56tk"
     }
   ]
 }

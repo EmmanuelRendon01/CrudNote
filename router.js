@@ -2,8 +2,6 @@ import { loadCss } from "./utils/loadCss.js";
 import { loadScript } from "./utils/loadJs.js";
 import { guardian } from "../services/auth.js";
 
-
-
 const routes = {
     '#/': 'landpage.html',
     '#/login': 'login.html',
@@ -53,11 +51,37 @@ export async function router() {
                 break;
 
             case '#/dashboard':
-                guardian();
+                if (!guardian()) {
+                    break;
+                }
+                loadCss('dashboard.css');
+                await loadScript('dashboard.js');
+
+                if (window.pageModules['dashboard.js']) {
+                    window.pageModules['dashboard.js'].init();
+                }
+
+                window.currentPage = 'dashboard.js';
+                break;
+
+            case '#/note':
+                if (!guardian()) {
+                    break;
+                }
+                loadCss('note.css')
+                await loadScript('note.js');
+
+                if (window.pageModules['note.js']) {
+                    window.pageModules['note.js'].init();
+                }
+
+                window.currentPage = 'note.js';
                 break;
         }
     } catch (error) {
+        // window.location.href = '#/';
         app.innerHTML = `<h1>Error</h1>`;
+        // alert(error);
         console.error(error);
     }
 }

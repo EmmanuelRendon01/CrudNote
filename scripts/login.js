@@ -23,11 +23,14 @@ export function init() {
             
             const emailFetch = await fetch(`http://localhost:3000/users?email=${data.email}`);
             const emailResponse = await emailFetch.json();
+            console.log(emailResponse);
+            
             
             if (emailResponse[0]) {
                 if (emailResponse[0].password === data.password) {
                     alert("Inicio de sesión exitoso.");
                     sessionStorage.setItem('logged', "true")
+                    sessionStorage.setItem('session', JSON.stringify(emailResponse[0]))
                     window.location.href = '#/dashboard'
                 }
                 else{
