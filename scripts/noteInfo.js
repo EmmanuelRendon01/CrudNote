@@ -23,7 +23,7 @@ export function render() {
                 <a class="nav-link fw-bold text-black" href="#/dashboard">My Notes</a>
                 <a class="nav-link fw-bold text-black" href="#/dashboard">Shared Notes</a>
                 <div class="d-flex gap-2 ms-3">
-                    <button type="button" class="btn btn-light fw-bold text-black">Sign Out</button>
+                    <button type="button" class="btn btn-light fw-bold text-black" id="signOut">Sign Out</button>
                 </div>
             </div>
         </div>
@@ -110,6 +110,13 @@ export function render() {
 }
 
 export async function afterRender() {
+
+
+    const signOut = document.getElementById('signOut');
+    signOut.addEventListener('click', (e) => {
+        sessionStorage.clear();
+        window.location.href = '#/';
+    })
 
     if (permission === 'read') {
         document.getElementById('title').disabled = true;
@@ -201,7 +208,6 @@ export async function afterRender() {
                 return;
             }
 
-
             const userShared = {
                 "userId": user.id,
                 "permission": data.permission
@@ -212,7 +218,7 @@ export async function afterRender() {
                 alert('Ya le compartiste la nota a este usuario.');
                 return;
             }
-            
+
             note.shared.push(userShared);
 
             update(note, 'notes', note.id);

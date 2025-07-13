@@ -70,10 +70,8 @@ export function render() {
     </div>
 </main>
         
-        `
+`
 }
-
-
 
 export function afterRender() {
 
@@ -164,8 +162,6 @@ export function afterRender() {
                             sessionStorage.setItem('noteAccess', JSON.stringify({ id: noteId, perm: perm }));
                             window.location.href = "#/noteInfo";
                         }
-
-
                     }
                 }
             }

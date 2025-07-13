@@ -19,7 +19,7 @@ export function render() {
                 <a class="nav-link fw-bold text-black" href="#/dashboard">My Notes</a>
                 <a class="nav-link fw-bold text-black" href="#/dashboard">Shared Notes</a>
                 <div class="d-flex gap-2 ms-3">
-                    <button type="button" class="btn btn-light fw-bold text-black">Sign Out</button>
+                    <button type="button" class="btn btn-light fw-bold text-black" id="signOut">Sign Out</button>
                 </div>
             </div>
         </div>
@@ -53,12 +53,15 @@ export function render() {
     </div>
 </main>
             
-            `
-
-
-}
+            `}
 
 export function afterRender() {
+
+    const signOut = document.getElementById('signOut');
+    signOut.addEventListener('click', (e) => {
+        sessionStorage.clear();
+        window.location.href = '#/';
+    })
 
     const createNoteForm = document.getElementById('createNoteForm');
 

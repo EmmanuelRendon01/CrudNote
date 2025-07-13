@@ -1,5 +1,5 @@
 export function auth(path) {
-    const protectedRoutes = ['/dashboard', '/note'];
+    const protectedRoutes = ['/dashboard', '/note', '/noteInfo'];
 
     if (protectedRoutes.includes(path)) {
         const session = sessionStorage.getItem('logged');
