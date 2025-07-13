@@ -97,6 +97,7 @@ export function afterRender() {
 
         renderMyNotes(data, user, myNotes);
         renderSharedNotes(data, user, sharedNotes);
+        manageNotes(data, user);
     }
 
     function renderMyNotes(data, user, myNotes) {
@@ -107,7 +108,7 @@ export function afterRender() {
                 cardNote.className = "col-12 col-md-3 col-lg-3 mb-3";
 
                 cardNote.innerHTML = `
-                <div class="card h-100">
+                <div class="card h-100" data-id="${note.id}">
                     <i class="bi bi-person-add fs-4 mx-3 pt-3"></i>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold text-black">${note.title}</h5>
@@ -130,7 +131,7 @@ export function afterRender() {
                     sharedCardNote.className = "col-12 col-md-4 col-lg-4 mb-3";
 
                     sharedCardNote.innerHTML = `
-                 <div class="card">
+                 <div class="card" data-id="${note.id}">
                     <i class="bi bi-person-add fs-4 mx-3 pt-3"></i>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold text-black">${note.title}</h5>
@@ -139,6 +140,33 @@ export function afterRender() {
                 </div>
             `
                     sharedNotes.appendChild(sharedCardNote)
+                }
+            }
+        });
+    }
+
+    function manageNotes(data, user) {
+        document.addEventListener('click', (e) => {
+            const card = e.target.closest('.card');
+            if (card && card.dataset.id) {
+                const noteId = card.dataset.id;
+                const note = data.find(n => n.id === noteId);
+
+                if (note) {
+                    if (note.authorId === user.id) {
+                        sessionStorage.setItem('noteAccess', JSON.stringify({ id: noteId, perm: 'all' }));
+                        window.location.href = "#/noteInfo";
+
+                    } else {
+                        let perm = note.shared.find(p => p.permission === "read" || p.permission === "edit");
+                        if (perm) {
+                            perm = perm.permission;
+                            sessionStorage.setItem('noteAccess', JSON.stringify({ id: noteId, perm: perm }));
+                            window.location.href = "#/noteInfo";
+                        }
+
+
+                    }
                 }
             }
         });

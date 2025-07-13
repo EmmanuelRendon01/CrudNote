@@ -43,6 +43,10 @@
       "shared": [
         {
           "userId": "PwVyMNK",
+          "permission": "edit"
+        },
+        {
+          "userId": "1FKGlPj",
           "permission": "read"
         }
       ]
@@ -56,17 +60,9 @@
         {
           "userId": "PwVyMNK",
           "permission": "read"
-        }
-      ]
-    },
-    {
-      "id": "asdsa1",
-      "authorId": "PwVyMNK",
-      "title": "Verifica si esto funcionó",
-      "noteBody": "Uy quieto esto tiene mucho contenido pa, que bueno",
-      "shared": [
+        },
         {
-          "userId": "b6dd",
+          "userId": "1FKGlPj",
           "permission": "read"
         }
       ]
@@ -75,7 +71,12 @@
       "title": "Año nuevo, vida nueva",
       "noteBody": "Entre pitos y matracas, Entre música y sonrisa, El reloj ya nos avisa que ha llegado un año más, Las mujeres y los hombres, un besito nos daremos, Entre todos cantaremos llenos de felicidad, Vamos todos a cantar",
       "authorId": "b6dd",
-      "shared": [],
+      "shared": [
+        {
+          "userId": "1FKGlPj",
+          "permission": "read"
+        }
+      ],
       "id": "s7GSs6C"
     },
     {
@@ -89,7 +90,12 @@
       "title": "Nota para seguir validando como se ve la nota",
       "noteBody": "",
       "authorId": "b6dd",
-      "shared": [],
+      "shared": [
+        {
+          "userId": "PwVyMNK",
+          "permission": "read"
+        }
+      ],
       "id": "aSx56tk"
     },
     {
@@ -98,6 +104,34 @@
       "authorId": "1FKGlPj",
       "shared": [],
       "id": "_jMaMCZ"
+    },
+    {
+      "title": "Que rico el vicio",
+      "noteBody": "Uy si",
+      "authorId": "PwVyMNK",
+      "shared": [
+        {
+          "userId": "b6dd",
+          "permission": "edit"
+        },
+        {
+          "userId": "1FKGlPj",
+          "permission": "read"
+        }
+      ],
+      "id": "ZoEoUFh"
+    },
+    {
+      "title": "Esta nota es la que le da el visto bueno",
+      "noteBody": "",
+      "authorId": "1FKGlPj",
+      "shared": [
+        {
+          "userId": "b6dd",
+          "permission": "edit"
+        }
+      ],
+      "id": "64b94B1"
     }
   ]
 }

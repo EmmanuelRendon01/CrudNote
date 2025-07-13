@@ -9,9 +9,9 @@ export function render() {
     </button>
     <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link fw-bold text-black" href="#">Home</a>
-        <a class="nav-link fw-bold text-black" href="#">Contact</a>
-        <a class="nav-link fw-bold text-black" href="#">Terms</a>
+        <a class="nav-link fw-bold text-black" href="#/?scroll=home">Home</a>
+        <a class="nav-link fw-bold text-black" href="#/?scroll=terms">Contact</a>
+        <a class="nav-link fw-bold text-black" href="#/?scroll=terms">Terms</a>
         <div class="d-flex gap-2 ms-3">
           <a class="btn btn-primary fw-bold" href="#/login" role="button">Sign In</a>
           <a class="btn btn-light fw-bold text-black" href="#/register" role="button">Register</a>
@@ -22,7 +22,7 @@ export function render() {
 </nav>
 
 <main>
-  <div class="container d-flex flex-column">
+  <div class="container d-flex flex-column" id="home">
     <section class="d-flex flex-column py-5">
       <div class="row">
         <div class="col-12 col-md-6 col-lg-5">
@@ -86,7 +86,7 @@ export function render() {
       </div>
     </section>
 
-    <footer class="py-4">
+    <footer class="py-4" id="terms">
       <div class="row justify-content-center text-center">
         <div class="col-12 col-md-4 col-lg-4">
           <p class="text-secondary">Home</p>
